@@ -6,6 +6,5 @@ before_install:
         - docker build -t hm3cheun/docker-react -f Dockerfile.dev .
 
 script:
-        - docker run hm3cheun/docker-react npm run test -- --coverage
-
+        - docker run -e CI=true hm3cheun/docker-react npm test
 
