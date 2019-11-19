@@ -5,9 +5,6 @@ services:
 before_install:
         - docker build -t hm3cheun/docker-react -f Dockerfile .
 
-script:
-        - docker run -e CI=true hm3cheun/docker-react npm test
-
 deploy:
     edge: true
     provider: elasticbeanstalk
